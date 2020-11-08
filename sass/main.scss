@@ -1,1 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: hsl(230, 17%, 14%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: auto;
+  :after {
+    content: "";
+    background: hsl(232, 19%, 15%);
+    position: fixed;
+    top: 0;
+    bottom: 70%;
+    right: 0;
+    left: 0;
+    content: " ";
+    z-index: -1;
+    border-radius: 0 0 10px 10px;
+  }
+}
+html {
+  font-family: "Inter", sans-serif;
+  font-size: 87.5%;
+  color: white;
+}
+header {
+  h2 {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: hsl(228, 12%, 44%);
+    margin: 0.3rem 0 2rem 0;
+  }
+}
+.title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  p {
+    position: absolute;
+    right: 50px;
+    text-align: end;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: hsl(228, 12%, 44%);
+  }
+}
+.toggle_btn {
+  position: relative;
+  height: 20px;
+  width: 40px;
+  background-image: linear-gradient(
+    to right,
+    hsl(210, 78%, 56%),
+    hsl(146, 68%, 55%)
+  );
+  border-radius: 34px;
+  span {
+    position: absolute;
+    margin: 0.2rem;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: hsl(230, 17%, 14%);
+  }
+}
+main > h1 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1.3rem;
+}
+.grid_container {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(4, 1fr);
+  margin-bottom: 3rem;
+}
+.hero_card {
+  background: hsl(228, 28%, 20%);
+  padding: 1rem 4rem;
+  border-radius: 5px;
+  text-align: center;
+}
+.lg_facebook_box {
+  border-top: solid 3pt hsl(208, 92%, 53%);
+}
+.lg_twitter_box {
+  border-top: solid 3pt hsl(208, 92%, 53%);
+}
+.lg_instagram_box {
+  border-top: solid 3pt;
+  border-image: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%))
+    1 stretch;
+}
+.lg_youtube_box {
+  border-top: solid 3pt hsl(348, 97%, 39%);
+  .lg_bottom_heading p {
+    color: hsl(356, 69%, 56%);
+  }
+}
+.lg_top_heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+  img {
+    width: 15px;
+  }
+  h3 {
+    margin-left: 1rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: hsl(228, 12%, 44%);
+  }
+}
+.lg_center_heading {
+  margin: 1.3rem 0;
+  h4 {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+  h5 {
+    font-size: 0.7rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: hsl(228, 12%, 44%);
+    margin-top: 0.5rem;
+  }
+}
+.lg_bottom_heading {
+  p {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: hsl(163, 72%, 41%);
+  }
+  span {
+    display: inline-block;
+    font-size: 0.7rem;
+    position: relative;
+    left: 0;
+    top: -1px;
+  }
+}
+.sm_hero_card {
+  padding: 1.3rem;
+}
+.sm_top_heading {
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  margin: 0rem;
+  width: 100%;
+  h3 {
+    margin: 0;
+  }
+}
+.sm_bottom_heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+  h4 {
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+}
+.sm_facebook_box_two {
+  .sm_bottom_heading p {
+    color: hsl(356, 69%, 56%);
+  }
+}
+.sm_youtube_box {
+  .sm_bottom_heading p {
+    color: hsl(356, 69%, 56%);
+  }
+}
 
+footer {
+  font-size: 0.7rem;
+ text-align: center;
+  a {
+    color: rgb(71, 99, 255);
+  }
+}
