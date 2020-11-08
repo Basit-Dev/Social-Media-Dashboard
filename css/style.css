@@ -21,7 +21,6 @@ body :after {
   bottom: 70%;
   right: 0;
   left: 0;
-  content: " ";
   z-index: -1;
   border-radius: 0 0 10px 10px;
 }
@@ -32,14 +31,19 @@ html {
   color: white;
 }
 
-.title {
+.wrapper {
+  width: 80%;
+}
+
+.top_title {
   position: relative;
 }
-.title h1 {
+.top_title h1 {
   font-size: 1.5rem;
   font-weight: 700;
+  margin-bottom: 0.5rem;
 }
-.title h2 {
+.top_title h2 {
   font-size: 0.8rem;
   font-weight: 700;
   color: #63687e;
@@ -77,70 +81,59 @@ html {
   background-color: #1e202a;
 }
 
-main > h1 {
-  font-size: 1.2rem;
-  font-weight: 700;
-  margin-bottom: 1.3rem;
-}
-
-.grid_container {
+.grid {
   display: grid;
   gap: 1.5rem;
   grid-template-columns: repeat(4, 1fr);
-  margin-bottom: 3rem;
 }
 
 .hero_card {
   background: #252a41;
-  padding: 1rem 4rem;
+  padding: 2rem;
   border-radius: 5px;
   text-align: center;
 }
 
-.lg_facebook_box {
+.facebook_top_border {
   border-top: solid 3pt #198ff5;
 }
 
-.lg_twitter_box {
+.twitter_top_border {
   border-top: solid 3pt #198ff5;
 }
 
-.lg_instagram_box {
+.instagram_top_border {
   border-top: solid 3pt;
   border-image: linear-gradient(to right, #fdc468, #df4996) 1 stretch;
 }
 
-.lg_youtube_box {
+.youtube_top_border {
   border-top: solid 3pt #c4032a;
 }
-.lg_youtube_box .lg_bottom_heading p {
-  color: #dc414c;
-}
 
-.lg_top_heading {
+.top_social_icon_name {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 1rem;
 }
-.lg_top_heading img {
+.top_social_icon_name img {
   width: 15px;
 }
-.lg_top_heading h3 {
+.top_social_icon_name h3 {
   margin-left: 1rem;
   font-size: 0.7rem;
   font-weight: 700;
   color: #63687e;
 }
 
-.lg_center_heading {
+.top_social_followers {
   margin: 1.3rem 0;
 }
-.lg_center_heading h4 {
+.top_social_followers h4 {
   font-size: 3rem;
   font-weight: 700;
 }
-.lg_center_heading h5 {
+.top_social_followers h5 {
   font-size: 0.7rem;
   font-weight: 400;
   text-transform: uppercase;
@@ -149,12 +142,12 @@ main > h1 {
   margin-top: 0.5rem;
 }
 
-.lg_bottom_heading p {
+.top_social_count p {
   font-size: 0.7rem;
   font-weight: 700;
   color: #1db489;
 }
-.lg_bottom_heading span {
+.top_social_count span {
   display: inline-block;
   font-size: 0.7rem;
   position: relative;
@@ -162,63 +155,105 @@ main > h1 {
   top: -1px;
 }
 
-.sm_hero_card {
+h1 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 2rem 0 1.3rem 0;
+}
+
+.bottom_hero_card {
   padding: 1.3rem;
 }
 
-.sm_top_heading {
+.bottom_social_icon_name {
   flex-direction: row-reverse;
   justify-content: space-between;
   margin: 0rem;
   width: 100%;
 }
-.sm_top_heading h3 {
+.bottom_social_icon_name h3 {
   margin: 0;
 }
 
-.sm_bottom_heading {
+.bottom_social_count {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: 2rem;
 }
-.sm_bottom_heading h4 {
+.bottom_social_count h4 {
   font-size: 1.8rem;
   font-weight: 700;
 }
 
-.sm_facebook_box_two .sm_bottom_heading p {
-  color: #dc414c;
-}
-
-.sm_youtube_box .sm_bottom_heading p {
+.bottom_social_count .red,
+.top_social_count .red {
   color: #dc414c;
 }
 
 footer {
   font-size: 0.7rem;
   text-align: center;
+  margin: 2rem;
 }
 footer a {
   color: #4763ff;
 }
 
 @media only screen and (max-width: 600px) {
-  .grid_container {
+  .wrapper {
+    margin: 2rem;
+    width: 100%;
+  }
+
+  .grid {
     display: flex;
     flex-direction: column;
   }
 
-  .toggle_btn {
+  .top_title {
     position: relative;
-    display: flex;
-    flex-direction: column;
   }
-  .toggle_btn p {
-    position: absolute;
-    font-size: 0.8rem;
+  .top_title h1 {
+    font-size: 1.5rem;
     font-weight: 700;
-    color: #63687e;
+  }
+  .top_title h2 {
+    margin: 0.3rem 0 2rem 0;
+    padding-bottom: 1.5rem;
+    border-bottom: solid 1pt #353535;
+  }
+
+  .toggle_btn_container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 0;
+    right: 0;
+    margin-bottom: 3rem;
+  }
+  .toggle_btn_container p {
+    margin-right: 0;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 1000px) {
+  .wrapper {
+    margin: 2rem;
+    width: 90%;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+  }
+
+  .top_title h2 {
+    margin: 0.3rem 0 2rem 0;
+    padding-bottom: 1.5rem;
+  }
+
+  .toggle_btn_container p {
+    margin-right: 1rem;
   }
 }
 
