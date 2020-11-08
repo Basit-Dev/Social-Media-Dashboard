@@ -32,28 +32,31 @@ html {
   color: white;
 }
 
-header h2 {
+.title {
+  position: relative;
+}
+.title h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.title h2 {
   font-size: 0.8rem;
   font-weight: 700;
   color: #63687e;
   margin: 0.3rem 0 2rem 0;
 }
 
-.title {
-  position: relative;
+.toggle_btn_container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-}
-.title h1 {
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-.title p {
   position: absolute;
-  right: 50px;
-  text-align: end;
+  top: 0;
+  right: 0;
+}
+.toggle_btn_container p {
+  margin-right: 0.8rem;
   font-size: 0.8rem;
+  width: 60px;
   font-weight: 700;
   color: #63687e;
 }
@@ -62,8 +65,8 @@ header h2 {
   position: relative;
   height: 20px;
   width: 40px;
-  background-image: linear-gradient(to right, #378fe6, #3eda82);
   border-radius: 34px;
+  background-image: linear-gradient(to right, #378fe6, #3eda82);
 }
 .toggle_btn span {
   position: absolute;
@@ -198,6 +201,25 @@ footer {
 }
 footer a {
   color: #4763ff;
+}
+
+@media only screen and (max-width: 600px) {
+  .grid_container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .toggle_btn {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  .toggle_btn p {
+    position: absolute;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #63687e;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
