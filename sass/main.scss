@@ -12,6 +12,7 @@ body {
   justify-content: center;
   min-height: 100vh;
   overflow: auto;
+  scroll-behavior: smooth;
   // INSERT TOP BACKGROUND IMAGE
   :after {
     content: "";
@@ -35,6 +36,7 @@ html {
 // MAIN WRAPPER
 .wrapper {
   width: 80%;
+  max-width: 1000px;
 }
 // END OF MAIN WRAPPER
 
@@ -312,12 +314,7 @@ footer {
   }
 }
 // END OF MOBILE OVER 600PX AND LESS THAN 1000PX
-@media only screen and (min-width: 1450px) {
-  .wrapper {
-    margin: 2rem;
-    max-width: 60%;
-  }
-}
+
 // TOGGLE BUTTON CLASS TO ADD WHEN BUTTON CLICKED
 .toggle_cta {
   background: hsl(0, 0%, 100%);

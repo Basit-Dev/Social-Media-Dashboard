@@ -12,6 +12,7 @@ body {
   justify-content: center;
   min-height: 100vh;
   overflow: auto;
+  scroll-behavior: smooth;
 }
 body :after {
   content: "";
@@ -33,6 +34,7 @@ html {
 
 .wrapper {
   width: 80%;
+  max-width: 1000px;
 }
 
 .top_title {
@@ -278,12 +280,6 @@ footer a {
 
   .toggle_btn_container p {
     margin-right: 1rem;
-  }
-}
-@media only screen and (min-width: 1450px) {
-  .wrapper {
-    margin: 2rem;
-    max-width: 60%;
   }
 }
 .toggle_cta {
