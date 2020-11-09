@@ -31,7 +31,7 @@ html {
   color: white;
 }
 
-.wrapper {
+#wrapper {
   width: 80%;
 }
 
@@ -65,20 +65,35 @@ html {
   color: #63687e;
 }
 
-.toggle_btn {
+button {
   position: relative;
   height: 20px;
   width: 40px;
   border-radius: 34px;
+  border: none;
+  outline: none;
   background-image: linear-gradient(to right, #378fe6, #3eda82);
 }
-.toggle_btn span {
+button .dark_toggle {
   position: absolute;
+  top: 0;
+  left: 0;
   margin: 0.2rem;
   width: 15px;
   height: 15px;
   border-radius: 50%;
   background-color: #1e202a;
+}
+button .grey_toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0.2rem;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: white;
+  visibility: hidden;
 }
 
 .grid {
@@ -92,6 +107,7 @@ html {
   padding: 2rem;
   border-radius: 5px;
   text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .facebook_top_border {
@@ -104,6 +120,9 @@ html {
 
 .instagram_top_border {
   border-top: solid 3pt;
+  border-right: 0;
+  border-bottom: 0;
+  border-left: 0;
   border-image: linear-gradient(to right, #fdc468, #df4996) 1 stretch;
 }
 
@@ -209,6 +228,7 @@ footer a {
   .grid {
     display: flex;
     flex-direction: column;
+    row-gap: 0.5rem;
   }
 
   .top_title {
@@ -222,6 +242,10 @@ footer a {
     margin: 0.3rem 0 2rem 0;
     padding-bottom: 1.5rem;
     border-bottom: solid 1pt #353535;
+  }
+
+  .hero_card {
+    margin-bottom: 1.5rem;
   }
 
   .toggle_btn_container {
@@ -255,6 +279,34 @@ footer a {
   .toggle_btn_container p {
     margin-right: 1rem;
   }
+}
+.toggle_cta {
+  background: white;
+}
+.toggle_cta :after {
+  content: "";
+  background: #f5f7ff;
+}
+.toggle_cta h1,
+.toggle_cta h4,
+.toggle_cta footer {
+  color: #1e202a;
+}
+.toggle_cta h3,
+.toggle_cta h5 {
+  color: #63687e;
+}
+.toggle_cta .hero_card {
+  background: #f0f2fa;
+}
+.toggle_cta button {
+  background: #aeb3cb;
+}
+.toggle_cta button .grey_toggle {
+  visibility: visible;
+}
+.toggle_cta button .dark_toggle {
+  visibility: hidden;
 }
 
 /*# sourceMappingURL=style.css.map */

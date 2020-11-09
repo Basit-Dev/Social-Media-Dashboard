@@ -7,19 +7,21 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | Social Media Dashboard</title>
   <link rel="stylesheet" href="./css/style.css">
+  <script src="test.js"></script>
 </head>
 
-<body>
-  <main class="wrapper">
+<body id="body">
+  <main id="wrapper">
     <header>
       <div class="top_title">
         <h1>Social Media Dashboard</h1>
         <h2>Total Followers: 23,004</h2>
         <div class="toggle_btn_container">
           <p>Dark Mode</p>
-          <div class="toggle_btn">
-            <span></span>
-          </div>
+            <button onclick="myFunction()">
+              <div class="grey_toggle"></div>
+              <div class="dark_toggle"></div>
+            </button>
         </div>
       </div>
     </header>
@@ -85,8 +87,9 @@
         </div>
       </section>
     </div>
-    <!-- CENTER POINT BOTTOM GRID START  -->
+    <!-- CENTER TITLE  -->
     <h1>Overview - Today</h1>
+    <!-- END OF CENTER TITLE  -->
     <div class="grid">
       <section class="hero_card bottom_hero_card">
         <div class="content_container">
