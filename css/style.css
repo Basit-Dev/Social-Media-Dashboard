@@ -31,7 +31,7 @@ html {
   color: white;
 }
 
-#wrapper {
+.wrapper {
   width: 80%;
 }
 
@@ -278,6 +278,12 @@ footer a {
 
   .toggle_btn_container p {
     margin-right: 1rem;
+  }
+}
+@media only screen and (min-width: 1450px) {
+  .wrapper {
+    margin: 2rem;
+    max-width: 60%;
   }
 }
 .toggle_cta {
